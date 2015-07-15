@@ -1,0 +1,26 @@
+<% if @author.errors.any? %>
+  <% @author.errors.full_messages.each do |error| %>
+    <p class="text-danger">
+      <%= error %>
+    </p>
+  <% end %>
+<% end %>
+
+<%= form_for @author do |el|%>
+  <div>
+    <%= el.label :first_name%>
+    <%= el.text_field :first_name, autofocus: true%>
+  </div>
+  <div>
+    <%= el.label :last_name%>
+    <%= el.text_field :last_name%>
+  </div>
+  <div>
+    <%= el.label :age%>
+    <%= el.number_field :age%>
+  </div>
+
+  <div>
+    <%= el.submit%>
+  </div>
+<% end %>

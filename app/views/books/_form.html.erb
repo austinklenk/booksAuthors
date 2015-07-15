@@ -1,0 +1,16 @@
+<h1>Add a Book</h1>
+
+<%=form_for [@author, @book] do |el| %>
+  <div>
+    <%= el.label :title%>
+    <%= el.text_field :title, autofocus: true%>
+  </div>
+  <div>
+    <%= el.label :description%>
+    <%= el.text_field :description%>
+  </div>
+
+  <div>
+    <%= el.submit%>
+  </div>
+<% end %>

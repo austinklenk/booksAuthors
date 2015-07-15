@@ -1,0 +1,12 @@
+<h1>AUTHOR INDEX</h1>
+
+<%=link_to "Add Author", new_author_path%>
+
+<% @authors.each do |author| %>
+	
+	<div class="index_info">
+	<%=link_to author.first_name + " " + author.last_name, author_path(author)%> <!-- This will take us to the author's show page -->
+	<%=author.age%>
+	</div>
+
+<%end%>

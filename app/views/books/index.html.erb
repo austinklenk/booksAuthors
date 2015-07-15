@@ -1,0 +1,9 @@
+<h1>All Books by <%= @author.first_name%> <%= @author.last_name%>:</h1>
+
+
+<% @author.books.each do |book|%>
+	<%=link_to book.title, book_path(book)%>
+	<%=book.description%>
+<%end%>
+
+<%=link_to "Go back to #{@author.first_name}'s", author_path(@author)%>

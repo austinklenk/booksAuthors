@@ -1,0 +1,5 @@
+<h1>This is <%=@author.first_name%> <%=@author.last_name%>'s Page</h1>
+
+<%=link_to "see #{@author.first_name} #{@author.last_name}'s books", author_books_path(@author)%><br/>
+<%=link_to "Add book", new_author_book_path(@author)%><br/>
+<%=link_to "Back to all authors", authors_path%>
